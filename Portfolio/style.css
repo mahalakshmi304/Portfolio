@@ -1,0 +1,179 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  display: flex;
+  min-height: 100vh;
+  margin: 0;
+  color: #ffffff;
+
+  background: linear-gradient(
+    135deg,
+    #0f0c29, 
+    #302b63,   
+    #24243e,  
+    #0f2027,  
+    #203a43   
+  );
+
+  background-size: 400% 400%;
+  animation: smoothBg 18s ease infinite;
+}
+
+@keyframes smoothBg {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* SIDEBAR */
+.sidebar {
+  width: 260px;
+  min-height: 100vh;
+  background: #111;
+  padding: 30px 20px;
+  position: fixed;
+  text-align: center;
+}
+
+.sidebar img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  filter: grayscale(100%);
+  transition: 0.4s;
+}
+
+.sidebar img:hover {
+  filter: grayscale(0%);
+}
+
+.sidebar h2 {
+  margin-top: 15px;
+}
+
+.sidebar p {
+  color: #aaa;
+  font-size: 0.9rem;
+}
+
+.sidebar nav {
+  margin: 30px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.sidebar nav a {
+  color: #fff;
+  text-decoration: none;
+  opacity: 0.7;
+  transition: 0.3s;
+}
+
+.sidebar nav a:hover {
+  opacity: 1;
+  color: #00e5ff;
+}
+
+.cv-btn {
+  display: block;
+  padding: 12px;
+  background: #00e5ff;
+  color: #000;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: bold;
+}
+
+/* MAIN */
+.content {
+  margin-left: 300px;
+  padding: 60px;
+}
+
+/* HERO */
+.hero h1 {
+  font-size: 2.5rem;
+}
+
+.hero h2 {
+  font-size: 3rem;
+}
+
+.hero span {
+  color: #00e5ff;
+}
+
+.hire-btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 30px;
+  border: 2px solid #00e5ff;
+  border-radius: 30px;
+  color: #00e5ff;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.hire-btn:hover {
+  background: #00e5ff;
+  color: #000;
+}
+
+/* SECTIONS */
+section {
+  margin-bottom: 80px;
+}
+
+.chips span {
+  display: inline-block;
+  padding: 10px 20px;
+  border: 1px solid #00e5ff;
+  border-radius: 30px;
+  margin: 10px 10px 0 0;
+}
+
+.card {
+  background: #1a1a1a;
+  padding: 25px;
+  border-left: 4px solid #00e5ff;
+  max-width: 400px;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+  gap: 20px;
+}
+
+.project {
+  background: #1a1a1a;
+  padding: 40px;
+  text-align: center;
+  border-radius: 15px;
+  transition: 0.3s;
+}
+
+.project:hover {
+  background: #00e5ff;
+  color: #000;
+}
+
+/* MOBILE */
+@media (max-width: 900px) {
+  .sidebar {
+    position: relative;
+    width: 100%;
+    min-height: auto;
+  }
+
+  .content {
+    margin-left: 0;
+  }
+}
